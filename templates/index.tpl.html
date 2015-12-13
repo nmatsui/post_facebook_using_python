@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>index</title>
+  </head>
+  <body>
+  {% if isOK %}
+    <a href="{{ url }}">get token</a>
+  {% else %}
+    <b>次のエラーが発生しました</b><br/>
+    [{{ error_type }}] {{ error_title }}
+  {% endif %}
+  </body>
+</html>

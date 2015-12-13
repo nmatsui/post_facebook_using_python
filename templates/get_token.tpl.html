@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>get_token</title>
+  </head>
+  <body>
+  {% if isOK %}
+    <b>User Access Token</b>と<b>Page Access Token</b>を取得しました。</br>
+    トークンは次のJSONフォーマットで{{ token_file }}に書き出しました。
+    <pre>{{ token_json }}</pre>
+  {% else %}
+    <b>次のエラーが発生しました。</b><br/>
+    [{{ error_type }}] {{ error_title }}
+  {% endif %}
+  </body>
+</html>
